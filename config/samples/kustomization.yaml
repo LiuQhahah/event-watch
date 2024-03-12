@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- event_v1_eventwatch.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

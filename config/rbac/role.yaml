@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - event.crd.liuqhahah.com
+  resources:
+  - eventwatches
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - event.crd.liuqhahah.com
+  resources:
+  - eventwatches/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - event.crd.liuqhahah.com
+  resources:
+  - eventwatches/status
+  verbs:
+  - get
+  - patch
+  - update
